@@ -1,0 +1,115 @@
+package TodasQuestoesEmUnicoCodigo;
+import java.util.Scanner;
+
+public class TodasQuestoesEmUnicoCodigo {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Voce quer ir para Primeira questão? Digite 1");
+		System.out.println("Voce quer ir para Segunda questão? Digite 2");
+		System.out.println("Voce quer ir para Terceira questão? Digite 3");
+		System.out.println("Voce quer ir para Quarta questão? Digite 4");
+		System.out.println("Voce quer ir para Quinta questão? Digite 5");
+		System.out.println("Voce quer ir para Sexta questão? Digite 6");
+		int res;
+		
+		res = sc.nextInt();
+		
+		if(res == 1) {
+			System.out.println("Vamos transformar Graus Centigrados e transformar em fahrenheit");
+			System.out.println("Digite a temperatura em Graus C");
+			int tempC;
+			tempC = sc.nextInt();
+			System.out.println("A temperatura em C é: " + tempC +" Convertida para F é " + ((tempC*9)+160)/5);
+		}
+		else { 
+			if (res == 2) {
+				System.out.println("Vou lhe falar quantos segundos do seu dia se passaram");
+				System.out.println("Informe as horas:");
+				int horas, min, seg, tota;
+				horas = sc.nextInt();
+				System.out.println("Agora informe os minutos:");
+				min = sc.nextInt();
+				System.out.println("Certo, estamos quase acabando informe os segundos:");
+				seg = sc.nextInt();
+				tota = horas*3600+min*60+seg;
+				System.out.println("Certo, com os dados que voce me passou ja se passaram" + tota);
+			} 
+			else {
+				if (res == 3){
+					System.out.println("Vamos calcular a gorjeta do garçom em um restaurante.");
+					System.out.println("Primeiro precisamos do valor gasto no restaurante informe o valor: ");
+					double gorjetas, valor,  total;
+					valor = sc.nextDouble();
+					gorjetas = (valor * 0.10);
+					total = gorjetas + valor;
+					System.out.println("Os seus gastos no restaurante foram de: " + valor);
+					System.out.println("Os valor da gorjeta é " + gorjetas + " e o total é " + total);
+				}
+				else {
+					if (res == 4) {
+						System.out.println("Ola, iremos calcular quantos salarios minimos voce recebe");
+						System.out.println("Qual o valor do salario minimo atual: ");
+						double SalarioMin, SalarioPessoal, media;
+						SalarioMin = sc.nextDouble();
+						System.out.println("Agora digite seu salario");
+						SalarioPessoal = sc.nextDouble();
+						media = SalarioPessoal / SalarioMin;
+						System.out.println("Voce recebe uma media de " + media + " Salario minimos");
+					} 
+					else {
+						if (res == 5) {
+							int DiaNasc, DiaAtual, MesNasc, MesAtual,AnoNasc, AnoAtual, DiasTotais;
+						System.out.println("Vamos calcular um media dos seus dias vividos.");
+						System.out.println("Digite o dia que voce nasceu");
+						DiaNasc = sc.nextInt();
+						System.out.println("Digite o mes que voce nasceu");
+						MesNasc = sc.nextInt();
+						System.out.println("Digite o ano que voce nasceu");
+						AnoNasc = sc.nextInt();
+						System.out.println("Digite o dia que voce atual");
+						DiaAtual = sc.nextInt();
+						System.out.println("Digite o mes que voce atual");
+						MesAtual = sc.nextInt();
+						System.out.println("Digite o ano que voce atual");
+						AnoAtual = sc.nextInt();
+						DiasTotais = ((AnoAtual - AnoNasc)* 365) + ((MesAtual - MesNasc)*30) +(DiaNasc - DiaAtual);
+						System.out.println("Voce viveu uma media de " + DiasTotais + " em dias");
+						}
+						else {
+							if (res == 6) {
+								double n1, n2, n3, p1,p2,p3, median;
+								System.out.println("Vamos calcular sua media:");
+								System.out.println("Informe sua nota da primeira unidade");
+								n1 = sc.nextDouble();
+								System.out.println("Qual o peso dessa nota:");
+								p1 = sc.nextDouble();
+								System.out.println("Informe sua nota da Segunda unidade");
+								n2 = sc.nextDouble();
+								System.out.println("Qual o peso dessa nota:");
+								p2 = sc.nextDouble();
+								System.out.println("Informe sua nota da terceira unidade");
+								n3 = sc.nextDouble();
+								System.out.println("Qual o peso dessa nota:");
+								p3 = sc.nextDouble();
+								median = (n1 + n2 + n3) / (p1 + p2 + p3);
+								System.out.print("sua media é: " + median);
+							}
+							else {
+								System.out.println("Opcão invalida!");
+							}
+						}
+					}
+				}
+			}
+					
+		
+			
+		}
+		
+		
+		
+		
+	}
+
+}
